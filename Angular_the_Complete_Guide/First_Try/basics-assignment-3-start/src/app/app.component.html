@@ -1,0 +1,14 @@
+<div class="fluid-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="showDetails = !showDetails">Display Details</button>
+      <button class="btn btn-primary" (click)=" onToggleDetails()">Display Details</button>
+      <br>
+      <p *ngIf ="showDetails">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium incidunt modi cum sapiente itaque molestias, natus possimus quas in amet alias ullam inventore excepturi, laborum quam et harum vel.</p>
+      <div *ngFor="let logItem of log"
+      [ngStyle]= "{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]= "{'white-text':logItem >= 5}"
+      >{{logItem}}</div>
+    </div>
+  </div>
+</div>
